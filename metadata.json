@@ -2,6 +2,7 @@
   "name": "Aadarsh Documents - Rampura Delhi",
   "description": "Professional document assistance, online government form filling, printing, scanning, and certificate assistance near SDM Office, Rampura, Delhi.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
-

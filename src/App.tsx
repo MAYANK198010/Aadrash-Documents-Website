@@ -14,7 +14,7 @@ import { MobileStickyBar } from './components/MobileStickyBar';
 import { Language } from './data/translations';
 
 export default function App() {
-  const [lang, setLang] = useState<Language>('hi'); // Defaulting to Hindi as widely preferred by local Delhi citizen applicants
+  const [lang, setLang] = useState<Language>('en'); // Default to English; users can switch to Hindi anytime
 
   useEffect(() => {
     // Sync html lang attribute

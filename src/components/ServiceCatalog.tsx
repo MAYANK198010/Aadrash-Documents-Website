@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, FileText, ArrowRight, MessageSquare, Clock, CheckCircle } from 'lucide-react';
+import { Search, FileText, ArrowRight, MessageSquare, Clock, CheckCircle, Printer } from 'lucide-react';
 import { SERVICES_DATA, SERVICE_CATEGORIES, ServiceItem } from '../data/servicesData';
 import { TRANSLATIONS, Language } from '../data/translations';
 import { ServiceDetailModal } from './ServiceDetailModal';
@@ -134,20 +134,32 @@ export const ServiceCatalog: React.FC<ServiceCatalogProps> = ({ lang, onOpenWhat
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service) => {
               const docCount = service.requiredDocs[lang].length;
+              const isPrintScan = service.category === 'print_scan';
 
               return (
                 <div
                   key={service.id}
                   onClick={() => setSelectedService(service)}
-                  className="group bg-white rounded-xl border border-slate-200 p-6 flex flex-col justify-between hover:border-slate-400 hover:shadow-md transition-all cursor-pointer relative"
+                  className={`group bg-white rounded-xl border p-6 flex flex-col justify-between hover:shadow-md transition-all cursor-pointer relative ${
+                    isPrintScan
+                      ? 'border-emerald-300 hover:border-emerald-500 bg-gradient-to-b from-emerald-50/20 to-white'
+                      : 'border-slate-200 hover:border-slate-400'
+                  }`}
                 >
                   <div className="space-y-3">
                     
-                    {/* Quiet Header Metadata */}
+                    {/* Header Metadata with Visual Indicator Badge for Print & Scan */}
                     <div className="flex items-center justify-between text-xs text-slate-500">
-                      <span className="font-semibold text-[#123C8C] uppercase tracking-wider text-[11px]">
-                        {service.category.replace('_', ' ')}
-                      </span>
+                      {isPrintScan ? (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 shadow-2xs">
+                          <Printer className="w-3 h-3 text-emerald-700 shrink-0" />
+                          <span>{lang === 'en' ? 'Print & Scan Desk' : 'प्रिंट व स्कैन डेस्क'}</span>
+                        </span>
+                      ) : (
+                        <span className="font-semibold text-[#123C8C] uppercase tracking-wider text-[11px]">
+                          {service.category.replace('_', ' ')}
+                        </span>
+                      )}
                       {service.popular && (
                         <span className="text-[11px] font-bold text-amber-700">
                           ★ {service.highlight || (lang === 'en' ? 'Popular' : 'प्रमुख')}
@@ -164,6 +176,14 @@ export const ServiceCatalog: React.FC<ServiceCatalogProps> = ({ lang, onOpenWhat
                     <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed">
                       {service.subtitle[lang]}
                     </p>
+
+                    {/* Print & Scan Specific Capability Highlight */}
+                    {isPrintScan && (
+                      <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
+                        <Printer className="w-3 h-3 text-emerald-600 shrink-0" />
+                        <span>{lang === 'en' ? 'Instant Counter Output (1200 DPI)' : 'दुकान पर तुरंत हाई-स्पीड प्रिंट/स्कैन'}</span>
+                      </div>
+                    )}
 
                     {/* Document Count & Timeline */}
                     <div className="pt-2 text-xs text-slate-500 space-y-1">

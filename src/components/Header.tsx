@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Phone, MessageSquare, Menu, X, Globe, MapPin } from 'lucide-react';
 import { TRANSLATIONS, Language } from '../data/translations';
+import { Logo } from './Logo';
 
 interface HeaderProps {
   lang: Language;
@@ -47,16 +48,17 @@ export const Header: React.FC<HeaderProps> = ({ lang, onToggleLang, onOpenWhatsA
 
       {/* Main Top Bar strictly fulfilling 3-zone contract */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Zone 1: Single text element wordmark */}
+        {/* Zone 1: Brand Logo & Title */}
         <a
           href="#home"
           onClick={(e) => {
             e.preventDefault();
             handleNavClick('#home');
           }}
-          className="text-xl sm:text-2xl font-bold tracking-tight text-[#071A4A] hover:text-[#123C8C] transition-colors whitespace-nowrap"
+          className="inline-flex items-center gap-2.5 text-lg sm:text-xl font-bold tracking-tight text-[#071A4A] hover:text-[#123C8C] transition-colors whitespace-nowrap"
         >
-          {t.brandName}
+          <Logo size={36} />
+          <span>{t.brandName}</span>
         </a>
 
         {/* Zone 2: Clean text navigation links */}

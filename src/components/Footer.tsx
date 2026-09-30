@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, ExternalLink, Globe } from 'lucide-react';
 import { TRANSLATIONS, Language } from '../data/translations';
+import { Logo } from './Logo';
 
 interface FooterProps {
   lang: Language;
@@ -19,9 +20,19 @@ export const Footer: React.FC<FooterProps> = ({ lang, onToggleLang }) => {
           
           {/* Col 1: Brand & NAP */}
           <div className="space-y-3">
-            <h3 className="text-xl font-bold text-white tracking-tight">
-              {t.brandName}
-            </h3>
+            <div className="flex items-center gap-3">
+              <div className="p-1 rounded-md bg-white/10 backdrop-blur-xs">
+                <Logo size={42} />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white tracking-tight leading-snug">
+                  {t.brandName}
+                </h3>
+                <span className="text-[10px] text-slate-400 uppercase tracking-widest font-semibold block">
+                  (SAVIER)
+                </span>
+              </div>
+            </div>
             <p className="text-slate-400 leading-relaxed">
               {lang === 'en'
                 ? 'Independent citizen document assistance, typing, online form filling, printing & scanning adjacent to SDM Office Rampura.'

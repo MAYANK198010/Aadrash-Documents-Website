@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, MessageSquare, CheckCircle, FileText, Printer, ShieldCheck, ArrowRight, Clock } from 'lucide-react';
 import { TRANSLATIONS, Language } from '../data/translations';
+import { Logo } from './Logo';
 
 interface HeroProps {
   lang: Language;
@@ -113,8 +114,8 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenWhatsApp, onScrollTo }) 
                     {lang === 'en' ? 'Rampura, Lawrence Road (Delhi - 110035)' : 'रामपुरा, लॉरेंस रोड (दिल्ली 110035)'}
                   </p>
                 </div>
-                <div className="p-2.5 rounded bg-blue-50 text-[#123C8C]">
-                  <FileText className="w-6 h-6" />
+                <div className="p-1 rounded-lg bg-slate-50 border border-slate-100 shadow-2xs">
+                  <Logo size={48} />
                 </div>
               </div>
 

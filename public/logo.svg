@@ -1,0 +1,74 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldNavyGrad" x1="80" y1="50" x2="180" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1B4282" />
+      <stop offset="60%" stop-color="#0F2B5C" />
+      <stop offset="100%" stop-color="#081A38" />
+    </linearGradient>
+    <linearGradient id="shieldGoldGrad" x1="180" y1="50" x2="280" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E2B755" />
+      <stop offset="45%" stop-color="#C99834" />
+      <stop offset="100%" stop-color="#9E731F" />
+    </linearGradient>
+    <linearGradient id="checkGoldGrad" x1="130" y1="180" x2="270" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B38221" />
+      <stop offset="25%" stop-color="#D8A53B" />
+      <stop offset="60%" stop-color="#F5D073" />
+      <stop offset="100%" stop-color="#C6942D" />
+    </linearGradient>
+    <linearGradient id="laurelGrad" x1="60" y1="120" x2="180" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E0B657" />
+      <stop offset="100%" stop-color="#A87A24" />
+    </linearGradient>
+    <linearGradient id="innerShieldGrad" x1="180" y1="80" x2="180" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="3" stdDeviation="3" flood-color="#0F2B5C" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Laurel Wreath -->
+  <g id="laurel-wreath" fill="url(#laurelGrad)">
+    <path d="M 172 295 C 145 285 110 262 90 225 C 75 198 70 165 72 135 C 74 145 80 185 105 218 C 122 240 148 262 172 272 Z" opacity="0.85" />
+    <path d="M 85 138 C 70 128 62 142 72 156 C 78 165 92 160 92 150 C 92 142 88 140 85 138 Z" />
+    <path d="M 75 168 C 60 162 55 178 68 189 C 76 195 90 188 88 178 C 86 172 80 170 75 168 Z" />
+    <path d="M 74 200 C 60 198 58 214 72 224 C 82 229 93 220 90 210 C 88 204 80 201 74 200 Z" />
+    <path d="M 84 230 C 72 232 72 248 88 254 C 98 257 107 246 102 238 C 98 232 90 231 84 230 Z" />
+    <path d="M 103 257 C 92 262 96 278 112 280 C 122 281 129 270 123 262 C 118 256 110 256 103 257 Z" />
+    <path d="M 129 278 C 120 285 128 300 142 298 C 152 297 156 286 148 280 C 143 276 135 277 129 278 Z" />
+
+    <path d="M 188 295 C 215 285 250 262 270 225 C 285 198 290 165 288 135 C 286 145 280 185 255 218 C 238 240 212 262 188 272 Z" opacity="0.85" />
+    <path d="M 275 138 C 290 128 298 142 288 156 C 282 165 268 160 268 150 C 268 142 272 140 275 138 Z" />
+    <path d="M 285 168 C 300 162 305 178 292 189 C 284 195 270 188 272 178 C 274 172 280 170 285 168 Z" />
+    <path d="M 286 200 C 300 198 302 214 288 224 C 278 229 267 220 270 210 C 272 204 280 201 286 200 Z" />
+    <path d="M 276 230 C 288 232 288 248 272 254 C 262 257 253 246 258 238 C 262 232 270 231 276 230 Z" />
+    <path d="M 257 257 C 268 262 264 278 248 280 C 238 281 231 270 237 262 C 242 256 250 256 257 257 Z" />
+    <path d="M 231 278 C 240 285 232 300 218 298 C 208 297 204 286 212 280 C 217 276 225 277 231 278 Z" />
+  </g>
+
+  <!-- Main Shield -->
+  <path d="M 180 50 L 105 78 C 95 140 92 195 180 272 L 180 50 Z" fill="url(#shieldNavyGrad)" />
+  <path d="M 180 50 L 255 78 C 265 140 268 195 180 272 L 180 50 Z" fill="url(#shieldGoldGrad)" />
+  <path d="M 180 64 L 117 88 C 110 142 110 186 180 254 C 250 186 250 142 243 88 L 180 64 Z" fill="url(#innerShieldGrad)" />
+
+  <!-- Open Book -->
+  <g stroke="#103264" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 180 145 C 160 135 138 136 128 142 L 128 206 C 138 200 160 198 180 208 Z" fill="#FFFFFF" />
+    <path d="M 136 154 C 148 148 165 147 176 154" stroke-width="2.5" opacity="0.6" />
+    <path d="M 136 168 C 148 162 165 161 176 168" stroke-width="2.5" opacity="0.6" />
+    <path d="M 180 145 C 200 135 222 136 232 142 L 232 206 C 222 200 200 198 180 208 Z" fill="#FFFFFF" />
+    <path d="M 184 154 C 195 147 212 148 224 154" stroke-width="2.5" opacity="0.6" />
+    <path d="M 184 168 C 195 161 212 162 224 168" stroke-width="2.5" opacity="0.6" />
+  </g>
+  <line x1="180" y1="145" x2="180" y2="216" stroke="#103264" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Dynamic Gold Checkmark -->
+  <g filter="url(#logoShadow)">
+    <path d="M 152 186 L 180 226 L 274 96 C 265 92 248 100 240 108 L 180 192 L 164 170 Z" fill="url(#checkGoldGrad)" />
+    <path d="M 152 186 L 180 226 L 182 222 L 160 178 Z" fill="#8B6214" opacity="0.6" />
+    <path d="M 180 226 L 274 96 C 268 94 256 102 240 108 L 180 218 Z" fill="#FFE8A3" opacity="0.45" />
+  </g>
+  <ellipse cx="180" cy="305" rx="55" ry="6" fill="#0F2B5C" opacity="0.12" />
+</svg>

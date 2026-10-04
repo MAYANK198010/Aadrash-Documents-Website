@@ -28,8 +28,13 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenWhatsApp, onScrollTo }) 
               <span className="text-slate-600 font-normal">{t.openStatus}</span>
             </div>
 
-            {/* Main Headline */}
+            {/* Main Headline with Target SEO Entity & Geo Anchor */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#071A4A] tracking-tight leading-tight max-w-2xl">
+              <span className="block text-sm sm:text-base font-bold text-[#123C8C] uppercase tracking-wider mb-2">
+                {lang === 'en'
+                  ? 'Aadrsh Documents (Savier) · SDM Office Rampura, Delhi 110035'
+                  : 'आदर्श डॉक्यूमेंट्स (Aadrsh Documents Savier) · एसडीएम ऑफिस रामपुरा, दिल्ली'}
+              </span>
               {t.heroTitle}
             </h1>
 

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Canonical Sitemap
+Sitemap: https://mayank198010.github.io/Aadrash-Documents-Website/sitemap.xml

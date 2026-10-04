@@ -2,7 +2,7 @@ export type Language = 'en' | 'hi';
 
 export const TRANSLATIONS = {
   en: {
-    brandName: 'Aadarsh Documents',
+    brandName: 'Aadrsh Documents (Savier)',
     tagline: 'Document & Online Services in Rampura, Delhi',
     nearSdm: 'Behind SDM Office, Rampura, Delhi - 110035',
     phone: '+91 7048956157',
@@ -124,7 +124,7 @@ export const TRANSLATIONS = {
     footerExternalListing: 'View Verified Listing on Justdial'
   },
   hi: {
-    brandName: 'आदर्श डॉक्यूमेंट्स',
+    brandName: 'आदर्श डॉक्यूमेंट्स (Aadrsh Documents)',
     tagline: 'दस्तावेज़ व ऑनलाइन सेवाएं · रामपुरा, दिल्ली',
     nearSdm: 'एसडीएम ऑफिस के पीछे, रामपुरा, दिल्ली - 110035',
     phone: '+91 7048956157',
